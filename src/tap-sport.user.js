@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tap Sport Bot [SmartBot]
 // @namespace    https://smartbot.black/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Bot for playing tap-sport in telegram
 // @author       Smartbot Team
 // @match        https://app.tapsport.io/*
@@ -61,9 +61,10 @@
 		});
 
 		image.dispatchEvent(touchstartEvent);
-		await new Promise((res) => setTimeout(res, getRandomInt(10, 500)));
+		await new Promise((res) => setTimeout(res, getRandomInt(10, 100)));
 		image.dispatchEvent(touchmoveEvent);
 		image.dispatchEvent(touchendEvent);
+		await new Promise((res) => setTimeout(res, getRandomInt(1, 20)));
 	};
 
 	while (true) {
