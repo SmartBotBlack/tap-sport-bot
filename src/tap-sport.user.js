@@ -83,7 +83,7 @@
 				);
 			} else {
 				await new Promise((res) =>
-					setTimeout(res, getRandomInt(1, 20) * 60 * 1e3),
+					setTimeout(res, getRandomInt(1, 10) * 60 * 1e3),
 				);
 			}
 		} catch (error) {
